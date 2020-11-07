@@ -7,12 +7,23 @@ img {
     opacity: 0.4;
     filter: alpha(opacity=40); /* For IE8 and earlier */
 }
-#mybox {
-width: 460px;
-height: 260px;
-background: url(bg.jpg) repeat;
-padding: 10px;
-color: #000000;
+div.background {
+    background: url(/bg.jpg) repeat;
+    border: 2px solid black;
+}
+
+div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
 }
   </style>
 </head>
@@ -21,10 +32,10 @@ color: #000000;
 
 <div class="background" >
   <div class="transbox">
-    <p>This is some text that is placed in the transparent box.</p>
+    <h3 align="center">Tugas Pertemuan 7 - Bahasa Pemrograman<h3>
+      
   </div>
 </div>
-<div id="mybox">ini adalah contoh dari penggunaan gambar pada background</div>
 </body>
 
 </html>
