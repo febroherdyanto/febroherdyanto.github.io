@@ -27,10 +27,30 @@ div.transbox p {
     color: #000000;
 }
   </style>
+    <script type="text/javascript">
+ window.onload = function() { jam(); }
+
+ function jam() {
+  var e = document.getElementById('jam'),
+  d = new Date(), h, m, s;
+  h = d.getHours();
+  m = set(d.getMinutes());
+  s = set(d.getSeconds());
+
+  e.innerHTML = h +':'+ m +':'+ s;
+
+  setTimeout('jam()', 1000);
+ }
+
+ function set(e) {
+  e = e < 10 ? '0'+ e : e;
+  return e;
+ }
+</script>
 </head>
 
 <body background="bg2.jpg">
-<br><br<br><br><br<br><br><br<br><br><br<br><br><br<br>
+<br><br><br><br>
 <center>
 <div class="background">
   <div class="transbox">
@@ -83,6 +103,12 @@ div.transbox p {
                 </h2>
             </td>
         </tr>
+      </table>
+      <table>
+          <tr>
+              <td width="70%" align="right"><p style="font-size: 20px; font-family: verdana;" align="right">Sekarang Pukul</p></td>
+              <td width="20%"><p style="font-size: 20px; font-family: verdana;" id="jam"></p></td>
+          </tr>
       </table>
 
   </div>
